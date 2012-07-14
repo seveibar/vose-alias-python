@@ -84,7 +84,7 @@ class Vose():
     
     #Get a random weighted value
     def get(self):
-        i = random.randint(0,self.n - 1)
+        i = random.randint(0,len(self.Prob) - 1)
         if self.Prob[i] >= random.random():
             return self.Alias[i][0]
         else:
