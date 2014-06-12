@@ -53,6 +53,12 @@ class Vose():
                 Small.append(prob)
             else:
                 Large.append(prob)
+                
+        if Large == []:
+            #fix for the issue that Large is empty caused by bad luck in calculations
+            Large = Small[:]
+            Small = []
+        
         #Sort into board
         while Small!=[] and Large!=[]:
             l = Small.pop(0)
